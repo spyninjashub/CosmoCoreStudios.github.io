@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Status - YourDevTools.io</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .status-header {
+            text-align: center;
+            padding: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .status-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .overall-status {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            color: #fff;
+        }
+
+        .operational { background-color: #28a745; }
+        .degraded { background-color: #ffc107; }
+        .partial-outage { background-color: #fd7e14; }
+        .major-outage { background-color: #dc3545; }
+
+        .services-list {
+            margin-top: 2rem;
+        }
+        
+        .service-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .service-item:last-child {
+            border-bottom: none;
+        }
+        
+        .service-name {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .service-status-indicator {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .status-circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .operational .status-circle { background-color: #28a745; }
+        .degraded .status-circle { background-color: #ffc107; }
+        .partial-outage .status-circle { background-color: #fd7e14; }
+        .major-outage .status-circle { background-color: #dc3545; }
+        
+        .incidents-section {
+            margin-top: 3rem;
+        }
+        
+        .incident-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .incident-title {
+            font-size: 1.25rem;
+            margin-top: 0;
+        }
+        
+        .incident-meta {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .incident-update {
+            margin-top: 1rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--border-color);
+        }
+        
+        .incident-update-time {
+            font-weight: bold;
+        }
+        
+        .incident-update-text {
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">YourDevTools.io</a>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="docs.html" class="nav-link">Docs</a>
+            <a href="features.html" class="nav-link">Features</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <div class="tos-content">
+            <div class="status-header">
+                <h1>Service Status</h1>
+                <p class="overall-status operational">All Systems Operational</p>
+                <p class="last-updated">Last Updated: September 18, 2025, 4:30 PM CDT</p>
+            </div>
+            
+            <section class="services-list">
+                <h2>Service Uptime</h2>
+                <!-- Service items. To edit, find the corresponding service and change the status classes -->
+                
+                <!-- Example of an operational service -->
+                <div class="service-item">
+                    <span class="service-name">API Service</span>
+                    <span class="service-status-indicator operational">
+                        <span class="status-circle"></span>
+                        Operational
+                    </span>
+                </div>
+                
+                <!-- Example of a degraded service -->
+                <div class="service-item">
+                    <span class="service-name">Frontend Web App</span>
+                    <span class="service-status-indicator degraded">
+                        <span class="status-circle"></span>
+                        Degraded Performance
+                    </span>
+                </div>
+                
+                <!-- Example of a major outage -->
+                <div class="service-item">
+                    <span class="service-name">Database Services</span>
+                    <span class="service-status-indicator major-outage">
+                        <span class="status-circle"></span>
+                        Major Outage
+                    </span>
+                </div>
+
+                <!-- Add more service items as needed -->
+                <!-- Example of another operational service -->
+                <div class="service-item">
+                    <span class="service-name">Documentation</span>
+                    <span class="service-status-indicator operational">
+                        <span class="status-circle"></span>
+                        Operational
+                    </span>
+                </div>
+            </section>
+            
+            <section class="incidents-section">
+                <h2>Recent Incidents</h2>
+                <!-- Incident Report. Copy and paste to add new incidents. -->
+                <div class="incident-card">
+                    <h3 class="incident-title">Major Outage affecting Database Services</h3>
+                    <p class="incident-meta">**Incident Started:** September 18, 2025, 3:45 PM CDT</p>
+                    
+                    <div class="incident-update">
+                        <p class="incident-update-time">**September 18, 2025, 4:30 PM CDT**</p>
+                        <p class="incident-update-text">Monitoring services show that the database has been fully restored. We will continue to monitor for any remaining issues.</p>
+                    </div>
+                    <div class="incident-update">
+                        <p class="incident-update-time">**September 18, 2025, 4:10 PM CDT**</p>
+                        <p class="incident-update-text">The issue with database services has been identified and a fix is being implemented. We are seeing early signs of recovery.</p>
+                    </div>
+                    <div class="incident-update">
+                        <p class="incident-update-time">**September 18, 2025, 3:45 PM CDT**</p>
+                        <p class="incident-update-text">We are investigating a major outage impacting our database services. This may cause service disruptions for some users. We will provide an update shortly.</p>
+                    </div>
+                </div>
+
+                <!-- Copy/paste this block for new incidents -->
+                <div class="incident-card">
+                    <h3 class="incident-title">Degraded Performance on Frontend Web App</h3>
+                    <p class="incident-meta">**Incident Started:** September 17, 2025, 10:00 AM CDT | **Resolved:** September 17, 2025, 11:30 AM CDT</p>
+                    
+                    <div class="incident-update">
+                        <p class="incident-update-time">**September 17, 2025, 11:30 AM CDT**</p>
+                        <p class="incident-update-text">The performance issue has been fully resolved. We apologize for any inconvenience caused.</p>
+                    </div>
+                    <div class="incident-update">
+                        <p class="incident-update-time">**September 17, 2025, 10:00 AM CDT**</p>
+                        <p class="incident-update-text">We are investigating reports of slow performance on our main web application. A fix is being worked on.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="tos.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 YourDevTools.io. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
