@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - YourDevTools.io</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-banner {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1200x400/343a40/ffffff') no-repeat center center/cover;
+            color: #ffffff;
+        }
+        
+        .hero-banner h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+        }
+
+        .team-member h4 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">YourDevTools.io</a>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="docs.html" class="nav-link">Docs</a>
+            <a href="features.html" class="nav-link">Features</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero-banner">
+            <h1>About Our Company</h1>
+            <p>Empowering developers to build the future. We're a team of engineers and designers dedicated to creating the best tools for the modern developer.</p>
+        </div>
+        
+        <div class="content-container">
+            <div class="tos-content">
+                <section>
+                    <h2 class="section-title">Our Story</h2>
+                    <p>Founded in [Year], our journey began with a simple frustration: the tools available for building and scaling applications were fragmented and inefficient. We envisioned a single platform that would streamline the entire development lifecycle, from code to deployment.</p>
+                    <p>From a small team working in a garage to a global community, we've remained true to our mission of putting developers first. Every feature, every line of code, is built with the goal of making your job easier and more productive.</p>
+                </section>
+                
+                <section>
+                    <h2 class="section-title">Our Mission</h2>
+                    <p>Our mission is to empower developers with powerful, intuitive, and reliable tools that enable them to focus on what they do best: creating innovative software. We are committed to transparency, open communication, and fostering a vibrant developer community.</p>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Meet the Team</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <img src="https://placehold.co/150" alt="Team Member 1">
+                            <h4>Jane Doe</h4>
+                            <p>Co-Founder & CEO</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="https://placehold.co/150" alt="Team Member 2">
+                            <h4>John Smith</h4>
+                            <p>Co-Founder & CTO</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="https://placehold.co/150" alt="Team Member 3">
+                            <h4>Emily Chen</h4>
+                            <p>Head of Product</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="tos.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 YourDevTools.io. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
