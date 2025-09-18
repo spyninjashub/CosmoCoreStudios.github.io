@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - YourDevTools.io</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pricing-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .pricing-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--primary-color);
+            border-width: 2px;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            color: var(--text-color);
+        }
+        
+        .pricing-card .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+        
+        .pricing-card .price span {
+            font-size: 1rem;
+            font-weight: normal;
+            color: var(--secondary-color);
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin: 2rem 0;
+        }
+        
+        .pricing-card li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-card li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--hover-color);
+        }
+
+        .cta-button.secondary {
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+        
+        .cta-button.secondary:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">YourDevTools.io</a>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="docs.html" class="nav-link">Docs</a>
+            <a href="features.html" class="nav-link">Features</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <div class="tos-content">
+            <h1 class="tos-title">Transparent Pricing, No Surprises</h1>
+            <p class="last-updated">Choose a plan that fits your team's needs, from hobby projects to large-scale enterprises.</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Hobby</h3>
+                    <p class="price">$0<span>/mo</span></p>
+                    <p>Perfect for personal projects and small teams getting started.</p>
+                    <ul>
+                        <li>1 user</li>
+                        <li>5 projects</li>
+                        <li>Standard support</li>
+                        <li>1GB storage</li>
+                    </ul>
+                    <a href="#" class="cta-button secondary">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Pro</h3>
+                    <p class="price">$50<span>/mo</span></p>
+                    <p>Everything you need to scale your dev team and your projects.</p>
+                    <ul>
+                        <li>Up to 10 users</li>
+                        <li>Unlimited projects</li>
+                        <li>Premium support</li>
+                        <li>100GB storage</li>
+                        <li>Advanced analytics</li>
+                    </ul>
+                    <a href="#" class="cta-button">Start Free Trial</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <p class="price">Custom</p>
+                    <p>Tailored for large organizations with advanced security and compliance needs.</p>
+                    <ul>
+                        <li>Unlimited users</li>
+                        <li>Unlimited projects</li>
+                        <li>Dedicated support</li>
+                        <li>Custom storage</li>
+                        <li>SSO & audit logs</li>
+                    </ul>
+                    <a href="#" class="cta-button secondary">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="tos.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 YourDevTools.io. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
