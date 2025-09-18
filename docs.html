@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - YourDevTools.io</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .doc-sidebar {
+            background-color: var(--sidebar-bg);
+            padding: 2rem;
+            border-right: 1px solid var(--border-color);
+            position: sticky;
+            top: 5rem;
+            height: calc(100vh - 5rem);
+            overflow-y: auto;
+        }
+
+        .doc-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .doc-nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            display: block;
+            padding: 0.5rem 0;
+            transition: color 0.2s ease;
+        }
+
+        .doc-nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .doc-content {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .code-block {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 1.5rem;
+        }
+
+        .syntax-highlight-comment { color: #5c6370; }
+        .syntax-highlight-keyword { color: #c678dd; }
+        .syntax-highlight-string { color: #98c379; }
+        .syntax-highlight-number { color: #d19a66; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">YourDevTools.io</a>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="docs.html" class="nav-link">Docs</a>
+            <a href="features.html" class="nav-link">Features</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <div class="doc-sidebar">
+            <nav class="doc-nav">
+                <h3>Getting Started</h3>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#authentication">Authentication</a></li>
+                </ul>
+                <h3>API Reference</h3>
+                <ul>
+                    <li><a href="#api-endpoints">API Endpoints</a></li>
+                    <li><a href="#data-models">Data Models</a></li>
+                </ul>
+                <h3>Advanced Guides</h3>
+                <ul>
+                    <li><a href="#webhooks">Webhooks</a></li>
+                    <li><a href="#best-practices">Best Practices</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="doc-content">
+            <h1 class="tos-title">Developer Documentation</h1>
+            <p class="last-updated">**Last Updated:** September 18, 2025</p>
+
+            <section id="introduction">
+                <h2 class="section-title">Introduction</h2>
+                <p>Welcome to the YourDevTools.io API documentation. Our platform provides a powerful set of tools to help you build, test, and deploy your applications with ease. Our RESTful API is designed to be intuitive and follows modern standards.</p>
+            </section>
+
+            <section id="authentication">
+                <h2 class="section-title">Authentication</h2>
+                <p>All API requests must be authenticated with a valid API key. You can find your API key in your account dashboard. Include your key in the <code>Authorization</code> header for every request.</p>
+                <div class="code-block">
+                    <code>
+                        <span class="syntax-highlight-keyword">curl</span> -H <span class="syntax-highlight-string">"Authorization: Bearer YOUR_API_KEY"</span> https://api.yourdevtools.io/v1/projects
+                    </code>
+                </div>
+            </section>
+
+            <section id="api-endpoints">
+                <h2 class="section-title">API Endpoints</h2>
+                <p>Here is a list of our primary API endpoints. For more detailed information on parameters and responses, see the full API reference.</p>
+                <ul>
+                    <li><code>GET /v1/projects</code> - Retrieve a list of all your projects.</li>
+                    <li><code>POST /v1/projects</code> - Create a new project.</li>
+                    <li><code>GET /v1/projects/{id}</code> - Get details for a specific project.</li>
+                </ul>
+            </section>
+
+            <section id="data-models">
+                <h2 class="section-title">Data Models</h2>
+                <p>Our API uses standard JSON data models. Here's an example of a typical project object.</p>
+                <div class="code-block">
+                    <pre><code>{
+  <span class="syntax-highlight-string">"id"</span>: <span class="syntax-highlight-string">"proj_12345"</span>,
+  <span class="syntax-highlight-string">"name"</span>: <span class="syntax-highlight-string">"My Awesome Project"</span>,
+  <span class="syntax-highlight-string">"status"</span>: <span class="syntax-highlight-string">"active"</span>,
+  <span class="syntax-highlight-number">"created_at"</span>: <span class="syntax-highlight-number">1672531200</span>
+}</code></pre>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="tos.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 YourDevTools.io. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
